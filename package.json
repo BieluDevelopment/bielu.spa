@@ -8,11 +8,27 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@astrojs/vue": "^1.2.2",
     "astro": "^1.7.1",
     "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.0.0-beta.12",
+    "@storybook/addon-interactions": "7.0.0-beta.12",
+    "@storybook/addon-links": "7.0.0-beta.12",
+    "@storybook/blocks": "7.0.0-beta.12",
+    "@storybook/testing-library": "0.0.13",
+    "@storybook/vue3": "7.0.0-beta.12",
+    "@storybook/vue3-webpack5": "7.0.0-beta.12",
+    "@vue/compiler-sfc": "3.2.45",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.0.0-beta.12",
+    "vue-loader": "17.0.1"
   }
 }
