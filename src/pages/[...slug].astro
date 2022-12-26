@@ -1,0 +1,25 @@
+---
+import type { APIRoute } from 'astro';
+import Api from '../services/api';
+try {
+  var response = await Api.GetRequest("/");
+    
+  } catch (error: unknown) {
+  
+  }
+  var theme = "ExampleTheme";
+
+var Metas =await Astro.glob('../layouts/**/MasterLayout.astro');
+
+const masterLayout = Metas.find(x=>x.file.includes(theme) ) ||  Metas.find(x=>x.file.includes("Defaults") );
+---
+
+
+        <div>
+          <masterLayout.default>
+            <div id="" slot="Content">
+                <div>{response}</div>
+                </div>
+            </masterLayout.default>
+        </div>
+      { JSON.stringify(Metas)}

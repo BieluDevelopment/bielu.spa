@@ -1,0 +1,31 @@
+---
+var theme = "ExampleTheme";
+
+var Metas = await Astro.glob('../../../**/Partials/Meta.astro');
+const Meta = Metas.find(x=>x.file.includes(theme) ) ||  Metas.find(x=>x.file.includes("Defaults") );
+
+var Headers = await Astro.glob('../../../**/Partials/Header.astro');
+const Header =Headers.find(x=>x.file.includes(theme) ) ||  Headers.find(x=>x.file.includes("Defaults") );
+
+var Footers = await Astro.glob('../../../**/Partials/Footer.astro');
+const Footer =Footers.find(x=>x.file.includes(theme) ) ||  Footers.find(x=>x.file.includes("Defaults") );
+
+
+---
+<html>
+<head>
+  
+          <Meta.default/>
+    
+</head>
+<body>
+          <Header.default/>
+    <slot name="after-header"/>
+    <slot name="Content" /> 
+    test
+   
+          <Footer.default/>
+      
+  <slot name="after-footer"/>
+</body>
+</html>

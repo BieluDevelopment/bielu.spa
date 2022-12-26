@@ -1,0 +1,22 @@
+---
+import Meta from './Partials/Meta.astro';
+import Header from './Partials/Header.astro';
+import Footer from './Partials/Footer.astro';
+---
+<html>
+<head>
+<Meta />
+</head>
+<body>
+    <Header />
+    <slot name="after-header"/>
+    after header
+    <slot name="Content" > 
+        <p>This is my fallback content, if there is no child passed into slot</p>
+    </slot>
+    test
+    <Footer />
+    
+  <slot name="after-footer"/>
+</body>
+</html>
