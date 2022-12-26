@@ -18,7 +18,15 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── public/
 ├── src/
 │   └── pages/
-│       └── index.astro
+│       └── [...slug].astro
+│   └── layouts
+│       └── Defaults/
+│           └── Partials/
+│           └── MasterLayout.astro
+│       └── Themes/
+│           └── ExampleTheme/
+│               └── Partials/
+│               └── MasterLayout.astro
 └── package.json
 ```
 
